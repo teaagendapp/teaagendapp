@@ -1,12 +1,14 @@
-<html lang="es" dir="ltr" class=""><head>
-        <meta name="robots" content="">
+<!DOCTYPE html>
+<html lang="es" dir="ltr" class="">
+    <head>
+        <meta name="robots" content="" />
 
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>TEA agendAPP</title>
         <meta name="title" content="TEA agendAPP">
-        <meta name="description" content="una agenda con pictogramas">                
+        <meta name="description" content="una agenda con pictogramas">                 
         <!--
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="{{title}}">
@@ -42,17 +44,18 @@
             .zdepth-5{box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px;}
         </style>
 </head>
-<body class="" style="cursor: auto;">
+<body class="">
 
-    <figure class="ui-draggable ui-draggable-handle zdepth-1" style="position: relative; z-index: 7; left: -230px; top: -215px;"><img src="./pictogramas/salado.png" alt="" width="" height="" class="responsive"></figure>
-    <figure class="ui-draggable ui-draggable-handle zdepth-1" style="position: relative; z-index: 9; left: -240px; top: -215px;"><img src="./pictogramas/picante.png" alt="" width="" height="" class="responsive"></figure>
-    <figure class="ui-draggable ui-draggable-handle zdepth-1" style="position: relative; z-index: 10; left: -250px; top: -216px;"><img src="./pictogramas/agradable.png" alt="" width="" height="" class="responsive"></figure>
-    <figure class="ui-draggable ui-draggable-handle zdepth-1" style="position: relative; z-index: 8; left: -1060px; top: -216px;"><img src="./pictogramas/dulce.png" alt="" width="" height="" class="responsive"></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/salado.png" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/picante.png" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/agradable.png" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/dulce.png" alt="" width="" height="" class="responsive" /></figure>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" crossorigin="anonymous"></script>
-	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" crossorigin="anonymous"></script>
+    
+   
     <script>
         //$( "#drag" ).draggable({ containment: "parent", scroll: false,grid: [ 20, 20 ], axis:"xy" });
         $( "figure" ).draggable({
@@ -77,5 +80,6 @@
             },
         });
     </script> 
+    
 </body>
 </html>
