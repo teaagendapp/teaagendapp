@@ -1,5 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.1.1/workbox-sw.js');
 
+workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
+
 console.log('Hello from service-worker.js');
 if (workbox) {
 	console.log(`Yay! Workbox is loaded 🎉`);  
