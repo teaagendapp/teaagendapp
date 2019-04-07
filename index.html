@@ -34,6 +34,11 @@
                 width:18%;
 				max-width:300px;
                 border-radius:10%;
+				touch-action: none;
+				box-sizing: border-box;
+				user-select: none;
+				-webkit-transform: translate(0px, 0px);
+				transform: translate(0px, 0px);
             }
             figure img{border-radius:10%;margin-bottom: -3px;}
             .responsive{
@@ -56,20 +61,28 @@
         </style>
 </head>
 <body class="">
-
-    <figure id="salado" class="zdepth-1"><img src="./pictogramas/salado.png" alt="" width="" height="" class="responsive" /></figure>
+	
+    <figure class="zdepth-1" id="salado" ><img src="./pictogramas/salado.png" alt="" width="" height="" class="responsive" /></figure>
     <figure class="zdepth-1"><img src="./pictogramas/picante.png" alt="" width="" height="" class="responsive" /></figure>
     <figure class="zdepth-1"><img src="./pictogramas/agradable.png" alt="" width="" height="" class="responsive" /></figure>
     <figure class="zdepth-1"><img src="./pictogramas/dulce.png" alt="" width="" height="" class="responsive" /></figure>
-	<figure class="zdepth-1"><img src="./pictogramas/amargo.png" alt="" width="" height="" class="responsive" /></figure>
-    
+    <figure class="zdepth-1"><img src="./pictogramas/amargo.png" alt="" width="" height="" class="responsive" /></figure>
+	
+	
+	
+	
+	
+	
+	
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" crossorigin="anonymous"></script>
+	
+	<!--<script src="https://cdn.jsdelivr.net/npm/interactjs@next/dist/interact.min.js"></script>-->
     
-   
-    <script>
+<script>
         //$( "#drag" ).draggable({ containment: "parent", scroll: false,grid: [ 20, 20 ], axis:"xy" });
+		
         $( "figure" ).draggable({
             containment: "body",
             cursor: "move",
@@ -93,7 +106,56 @@
 				ui.helper.css('left', perc + '%');				
             },
         });
-    </script> 
+		
+/*
+interact("figure")
+	.draggable({
+			onmove: window.dragMoveListener,
+			inertia: false,
+			modifiers: [
+				interact.modifiers.restrict({
+					restriction: 'parent',
+					elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+				})			
+	],
+
+});
+
+function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the position attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+  // this is used later in the resizing and gesture demos
+  window.dragMoveListener = dragMoveListener;
+  */
+  window.addEventListener('load', () => {
+  if (!('serviceWorker' in navigator)) {
+    // service workers not supported
+    return
+  }
+
+  navigator.serviceWorker.register('/worker.js').then(
+    () => {
+      // registered!
+    },
+    err => {
+      console.error('SW registration failed!', err)
+    }
+  )
+})
+</script>
     
 </body>
 </html>
