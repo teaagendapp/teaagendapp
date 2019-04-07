@@ -71,9 +71,11 @@
             drag: function() {
                 
             },
-            stop: function() {
+            stop: function(e, ui) {
                 $( this ).removeClass( "zdepth-5" );
                 $( this ).addClass( "zdepth-1" );
+				var perc = ui.position.left / ui.helper.parent().width() * 100;
+				ui.helper.css('left', perc + '%');
             },
         });
     </script> 
