@@ -5,7 +5,7 @@ if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
   
   
-  workbox.routing.registerRoute(
+	workbox.routing.registerRoute(
 	  new RegExp('.*\.js'),
 	  new workbox.strategies.NetworkFirst()
 	);
