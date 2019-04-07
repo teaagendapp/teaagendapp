@@ -77,12 +77,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" crossorigin="anonymous"></script>
-	
-	<!--<script src="https://cdn.jsdelivr.net/npm/interactjs@next/dist/interact.min.js"></script>-->
-    
+
 <script>
-        //$( "#drag" ).draggable({ containment: "parent", scroll: false,grid: [ 20, 20 ], axis:"xy" });
-		
         $( "figure" ).draggable({
             containment: "body",
             cursor: "move",
@@ -106,49 +102,16 @@
 				ui.helper.css('left', perc + '%');				
             },
         });
-		
-/*
-interact("figure")
-	.draggable({
-			onmove: window.dragMoveListener,
-			inertia: false,
-			modifiers: [
-				interact.modifiers.restrict({
-					restriction: 'parent',
-					elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-				})			
-	],
-
-});
-
-function dragMoveListener (event) {
-    var target = event.target,
-        // keep the dragged position in the data-x/data-y attributes
-        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-
-    // translate the element
-    target.style.webkitTransform =
-    target.style.transform =
-      'translate(' + x + 'px, ' + y + 'px)';
-
-    // update the position attributes
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-  }
-
-  // this is used later in the resizing and gesture demos
-  window.dragMoveListener = dragMoveListener;
-  */
+ /*
+When a user first comes to your website, the only thing a service worker can do is be installed.
+Anything that’s inside the service worker, any of the functionalities it comes with, are not enabled until the user visits a second page on your site, or refreshes the current page. This is by design.
+*/
+// Check that service workers are registered
 if ('serviceWorker' in navigator) {
-  console.log('CLIENT: service worker registration in progress.');
-  navigator.serviceWorker.register('/service-worker.js').then(function() {
-    console.log('CLIENT: service worker registration complete.');
-  }, function() {
-    console.log('CLIENT: service worker registration failure.');
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
   });
-} else {
-  console.log('CLIENT: service worker is not supported.');
 }
 </script>
     
