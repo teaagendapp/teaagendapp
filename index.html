@@ -97,7 +97,7 @@
 const figures = document.getElementsByTagName("figure");
 for (i = 0; i < figures.length; i++) {
 	window['figure'+i] = new PlainDraggable( figures[i] );
-	window['figure'+i].snap = {step: 90};
+	'figure'+i.snap = {step: 90};
 
 }
 /*
