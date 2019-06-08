@@ -100,7 +100,7 @@ for (i = 0; i < figures.length; i++) {
 	targetlist += 'figure'+i.snap+',';
 }
 for (i = 0; i < figures.length; i++) {
-	'figure'+i.snap = {step: 90, targets:targetlist};
+	window['figure'+i].snap = {step: 90, targets:targetlist};
 }
 /*
         $( "figure" ).draggable({
