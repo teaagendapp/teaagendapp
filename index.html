@@ -121,13 +121,36 @@
 var respuesta = document.getElementById('respuesta'); 
 const figures = document.getElementsByTagName("figure");
 for (i = 0; i < figures.length; i++) {
+    figures[i].id = "figure"+i;
+    
 	window['figure'+i] = new PlainDraggable( figures[i] );
 	window['figure'+i].snap = {
         boundingBox: respuesta,
         edge: 'inside',
     };
+    
+    window['figure'+i].onDragStart = function(pointerXY) {
+       
+        var figure_id = this._id -1;
+        var elemento = document.getElementById('figure'+figure_id);      
+        elemento.classList.remove('zdepth-1');
+        elemento.classList.add('zdepth-5');
+    };
+    
+     window['figure'+i].onDragEnd = function(pointerXY) {
+        
+        var figure_id = this._id -1;
+        var elemento = document.getElementById('figure'+figure_id);     
+        elemento.classList.remove('zdepth-5');
+        elemento.classList.add('zdepth-1');
+    };
+    
 }
 
+    
+figure1.onDrag = function(newPosition) {
+  return !!newPosition.snapped; //se queda anclado adonde se haya snapeado
+};
 /*
 When a user first comes to your website, the only thing a service worker can do is be installed.
 Anything that’s inside the service worker, any of the functionalities it comes with, are not enabled until the user visits a second page on your site, or refreshes the current page. This is by design.
