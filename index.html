@@ -27,8 +27,9 @@
 				height:100%;
                 overflow: auto;
                 background:radial-gradient(circle, rgba(255,255,255,0.5046393557422969) 10%, rgba(17,17,17,1) 200%),url(mesa_madera_textura.jpg) no-repeat center center / cover fixed;
-                display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center; align-items:center;align-content:flex-end;
+                display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center; align-items:center;align-content:center;
             }
+            
 	        figure{
                 padding:0;margin:5px;border:0;
                 width:90px;
@@ -42,27 +43,31 @@
 				transform: translate(0px, 0px);
             }
 			
-			
-			
             figure img{border-radius:10%;margin-bottom: -3px;}
             .responsive{
                 max-width: 100%;
                 height: auto;
             }
+            
             h1{
-             
                 position: relative;
-                text-shadow: 1px 1px 2px #000;
-                color: white;
-                top: 0%;
+                text-shadow: 1px 1px 2px #999;
+                color: #333;
+
                 text-align: center;
-                width:100%;
+                width: 100%;
+                margin: 0;
+                font-size: 1.2rem;
+                padding: 0;
+                margin-bottom: 10px;
             }
+            
+            hr{width:100%;    border: 0;}
+            
             #pregunta{
                 width: 180px;
                 position: relative;
-                top: 12%;
-                height: 180px;
+                background-color: #e1e1e1;
                 
             }
 			#respuesta {
@@ -83,8 +88,7 @@
             .zdepth-3{box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;}
             .zdepth-4{box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px, rgba(0, 0, 0, 0.22) 0px 10px 18px;}
             .zdepth-5{box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px;}
-            
-            hr{width:100%;}
+                        
 			/*
 			@media only screen and (max-width: 480px) {
 				body{display: flex;flex-direction:column;flex-wrap: wrap;justify-content: center; align-items:center;align-content:flex-start;}				
@@ -97,8 +101,8 @@
 </head>
 <body class="">
     
-    <div class="zdepth-1" id="pregunta"><img src="./pictogramas/¿cómo estás.png" alt="" width="" height="" class="responsive" /></div>
-	<h1>¿Cómo estás hoy?</h1>
+    <div class="zdepth-1" id="pregunta"><img src="./pictogramas/¿cómo estás.png" alt="" width="" height="" class="responsive" /><h1>¿Cómo estás hoy?</h1></div>	
+    <hr />
 	<div class="zdepth-1" id="respuesta"></div>
 	<hr />
     <figure class="zdepth-1"><img src="./pictogramas/emociones/contento.jpg" alt="" width="" height="" class="responsive" /></figure>
