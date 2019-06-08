@@ -51,15 +51,16 @@
             }
             h1{
              
-                position: fixed;
+                position: relative;
                 text-shadow: 1px 1px 2px #000;
                 color: white;
                 top: 0%;
                 text-align: center;
+                width:100%;
             }
             #pregunta{
                 width: 180px;
-                position: fixed;
+                position: relative;
                 top: 12%;
                 height: 180px;
                 
@@ -71,7 +72,7 @@
 				width: 90px;
 				height: 90px;
                 border-radius: 10%;
-                position: fixed;
+                position: relative;
                 display: flex;                
                 align-self: center;
                 box-shadow: inset 0 0 10px #fff;
@@ -82,6 +83,8 @@
             .zdepth-3{box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;}
             .zdepth-4{box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px, rgba(0, 0, 0, 0.22) 0px 10px 18px;}
             .zdepth-5{box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px;}
+            
+            hr{width:100%;}
 			/*
 			@media only screen and (max-width: 480px) {
 				body{display: flex;flex-direction:column;flex-wrap: wrap;justify-content: center; align-items:center;align-content:flex-start;}				
@@ -97,7 +100,7 @@
     <div class="zdepth-1" id="pregunta"><img src="./pictogramas/¿cómo estás.png" alt="" width="" height="" class="responsive" /></div>
 	<h1>¿Cómo estás hoy?</h1>
 	<div class="zdepth-1" id="respuesta"></div>
-	
+	<hr />
     <figure class="zdepth-1"><img src="./pictogramas/emociones/contento.jpg" alt="" width="" height="" class="responsive" /></figure>
     <figure class="zdepth-1"><img src="./pictogramas/emociones/feliz.jpg" alt="" width="" height="" class="responsive" /></figure>
     <figure class="zdepth-1"><img src="./pictogramas/emociones/lloroso.jpg" alt="" width="" height="" class="responsive" /></figure>
@@ -147,10 +150,12 @@ for (i = 0; i < figures.length; i++) {
     
 }
 
-    
+ /*   
 figure1.onDrag = function(newPosition) {
   return !!newPosition.snapped; //se queda anclado adonde se haya snapeado
 };
+*/
+    
 /*
 When a user first comes to your website, the only thing a service worker can do is be installed.
 Anything that’s inside the service worker, any of the functionalities it comes with, are not enabled until the user visits a second page on your site, or refreshes the current page. This is by design.
