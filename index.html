@@ -91,6 +91,8 @@
 	<script src="plain-draggable.min.js"></script>
 	
 <script>
+draggable = new PlainDraggable(document.getElementsByTagName('figure'));
+/*
         $( "figure" ).draggable({
             containment: "body",
             cursor: "move",
@@ -114,7 +116,8 @@
 				ui.helper.css('left', perc + '%');				
             },
         });
-		
+		*/
+		/*
 $( "#droppable" ).droppable({
       classes: {
         "ui-droppable-active": "ui-state-active",
@@ -127,10 +130,12 @@ $( "#droppable" ).droppable({
             .html( "Dropped!" );
       }
     });
+	*/
  /*
 When a user first comes to your website, the only thing a service worker can do is be installed.
 Anything that’s inside the service worker, any of the functionalities it comes with, are not enabled until the user visits a second page on your site, or refreshes the current page. This is by design.
 */
+/*
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
@@ -138,6 +143,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js');
   });
 }
+*/
 </script>
     
 </body>
