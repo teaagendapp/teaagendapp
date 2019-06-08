@@ -29,16 +29,26 @@
 				height:100%;
                 overflow: auto;
                 background:radial-gradient(circle, rgba(255,255,255,0.5046393557422969) 10%, rgba(17,17,17,1) 200%),url(mesa_madera_textura.jpg) no-repeat center center / cover fixed;
+                /*
                 display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center; align-items:center;align-content:center;
+                */
                 font-family: 'Montserrat', sans-serif;
             }
-            
+            section{
+                padding:0;margin:0;border:0;
+                
+				width:100%;
+				min-height:100vh;
+                overflow: auto;              
+                display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center; align-items:center;align-content:center;
+             
+            }
 	        figure{
                 padding:0;margin:5px;border:0;
                 width:90px;
-				height:90px;
+				height:auto;
 				
-                border-radius:10%;
+                border-radius:10px;
 				touch-action: none;
 				box-sizing: border-box;
 				user-select: none;
@@ -46,7 +56,13 @@
 				transform: translate(0px, 0px);
             }
 			
-            figure img{border-radius:10%;margin-bottom: -3px;}
+            figure img{
+                border-radius:10px;
+                margin:0px;
+                vertical-align: middle;
+                border: 0;
+                padding: 0;
+            }
             .responsive{
                 max-width: 100%;
                 height: auto;
@@ -67,21 +83,21 @@
             
             hr{width:100%;    border: 0;}
             
-            #pregunta{
+            .pregunta{
                 width: 180px;
                 height: 180px;
                 position: relative;
                
                 
             }
-            #pregunta img{ border-radius: 10%;}
-			#respuesta {
+            .pregunta img{ border-radius: 10px;}
+			.respuesta {
 				border: 0px solid grey;
 				background-color: black;
 				opacity: 0.4;
 				width: 90px;
 				height: 90px;
-                border-radius: 10%;
+                border-radius: 10px;
                 position: relative;
                 display: flex;                
                 align-self: center;           
@@ -104,20 +120,116 @@
         </style>
 </head>
 <body class="">
-    <h1>¿Cómo estás hoy?</h1>
-    <div class="zdepth-1" id="pregunta"><img src="./pictogramas/¿cómo estás.png" alt="" width="" height="" class="responsive" /></div>	
-    <hr />
-	<div class="zdepth-1" id="respuesta"></div>
-	<hr />
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/contento.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/feliz.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/lloroso.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/sorprendido.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/triste.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/amistoso.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/aburrido.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/enfadado.jpg" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/emociones/dudoso.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <section id="animo">
+        <h1>¿Cómo estás hoy?</h1>
+        <div class="zdepth-1 pregunta" id="pregunta"><img src="./pictogramas/¿cómo estás.png" alt="" width="" height="" class="responsive" /></div>	
+        <hr />
+        <div class="zdepth-1 respuesta" id="respuesta_animo"></div>
+        <hr />
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/contento.jpg" alt="contento" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/feliz.jpg" alt="feliz" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/lloroso.jpg" alt="lloroso" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/sorprendido.jpg" alt="sorprendido" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/triste.jpg" alt="triste" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/amistoso.jpg" alt="amistoso" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/aburrido.jpg" alt="aburrido" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/enfadado.jpg" alt="enfadado" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/emociones/dudoso.jpg" alt="dudoso" width="" height="" class="responsive" /></figure>
+    </section>
+        <hr />
+     <section id="meses">
+             <h1>¿En qué mes estamos?</h1>
+             	
+            <hr />
+            <div class="zdepth-1 respuesta" id="respuesta_mes"></div>
+            <hr />
+            <figure class="zdepth-1"><img src="./pictogramas/Meses/1 Enero.png" alt="enero" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/2 Febrero.png" alt="febrero" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/3 Marzo.png" alt="marzo" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/4 Abril.png" alt="abril" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/5 Mayo.png" alt="mayo" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/6 Junio.png" alt="junio" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/7 Julio.png" alt="julio" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/8 Agosto.png" alt="agosto" width="" height="" class="responsive" /></figure>
+             <figure class="zdepth-1"><img src="./pictogramas/Meses/9 Septiembre.png" alt="septiembre" width="" height="" class="responsive" /></figure>
+                <figure class="zdepth-1"><img src="./pictogramas/Meses/10 Octubre.png" alt="octubre" width="" height="" class="responsive" /></figure>
+              <figure class="zdepth-1"><img src="./pictogramas/Meses/11 Noviembre.png" alt="noviembre" width="" height="" class="responsive" /></figure>
+              <figure class="zdepth-1"><img src="./pictogramas/Meses/12 Diciembre.png" alt="diciembre" width="" height="" class="responsive" /></figure>
+        
+    </section>
+        
+         <hr />
+     <section id="dias_semana">
+          <h1>¿Qué día de la semana es?</h1>
+              	
+            <hr />
+            <div class="zdepth-1 respuesta" id="respuesta_dia_semana"></div>
+            <hr />
+            <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Lunes.png" alt="lunes" width="" height="" class="responsive" /></figure>        
+         <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Martes.png" alt="martes" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Miércoles.png" alt="miércoles" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Jueves.png" alt="jueves" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Viernes.png" alt="viernes" width="" height="" class="responsive" /></figure>
+          <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Sábado.png" alt="sábado" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Domingo.png" alt="domingo" width="" height="" class="responsive" /></figure>
+        
+        
+    </section>
+    
+     <section id="numero_dia">
+          <h1>¿Qué día del mes es?</h1>
+         
+          <hr />
+            <div class="zdepth-1 respuesta" id="respuesta_numero_dia_unidades"></div>
+            <div class="zdepth-1 respuesta" id="respuesta_numero_dia_decenas"></div>
+            <hr />
+            <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 1.jpg" alt="uno" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 2.jpg" alt="dos" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 3.jpg" alt="tres" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 4.jpg" alt="cuatro" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 5.jpg" alt="cinco" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 6.jpg" alt="seis" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 7.jpg" alt="siete" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 8.jpg" alt="ocho" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 9.jpg" alt="nueve" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/cartas 0.jpg" alt="cero" width="" height="" class="responsive" /></figure>
+     </section>  
+    
+     <section id="year">
+          <h1>¿Qué año es?</h1>
+         
+          <hr />
+            <div class="zdepth-1 respuesta" id="respuesta_year_unidades"></div>
+            <div class="zdepth-1 respuesta" id="respuesta_year_decenas"></div>
+            <div class="zdepth-1 respuesta" id="respuesta_year_centenas"></div>
+            <div class="zdepth-1 respuesta" id="respuesta_year_millares"></div>
+            <hr />
+            <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 1.jpg" alt="uno" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 2.jpg" alt="dos" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 3.jpg" alt="tres" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 4.jpg" alt="cuatro" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 5.jpg" alt="cinco" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 6.jpg" alt="seis" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 7.jpg" alt="siete" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 8.jpg" alt="ocho" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 9.jpg" alt="nueve" width="" height="" class="responsive" /></figure>
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/cartas 0.jpg" alt="cero" width="" height="" class="responsive" /></figure>
+     </section> 
+    
+      <section id="clima">
+          <h1>¿Qué tiempo hace?</h1>
+         
+          <hr />
+            <div class="zdepth-1 respuesta" id="respuesta_clima"></div>           
+            <hr />
+        <figure class="zdepth-1"><img src="./pictogramas/Tiempo-Atmosferico/lluvia.jpg" alt="lluvia" width="" height="" class="responsive" /></figure>         
+          <figure class="zdepth-1"><img src="./pictogramas/Tiempo-Atmosferico/sol.jpg" alt="sol" width="" height="" class="responsive" /></figure>
+          <figure class="zdepth-1"><img src="./pictogramas/Tiempo-Atmosferico/nubes.jpg" alt="nubes" width="" height="" class="responsive" /></figure>
+          <figure class="zdepth-1"><img src="./pictogramas/Tiempo-Atmosferico/nieve.jpg" alt="nieve" width="" height="" class="responsive" /></figure>
+          <figure class="zdepth-1"><img src="./pictogramas/Tiempo-Atmosferico/truenos.jpg" alt="truenos" width="" height="" class="responsive" /></figure>
+    
+     </section> 
+    
 	<!--
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -129,14 +241,30 @@
 <script>
 //draggable = new PlainDraggable(document.getElementsByTagName('figure'));
 //draggable = new PlainDraggable(document.getElementById('pregunta'));
-var respuesta = document.getElementById('respuesta'); 
+//var respuesta = document.getElementById('respuesta'); 
 const figures = document.getElementsByTagName("figure");
 for (i = 0; i < figures.length; i++) {
     figures[i].id = "figure"+i;
     
 	window['figure'+i] = new PlainDraggable( figures[i] );
 	window['figure'+i].snap = {
-        boundingBox: respuesta,
+        targets: [
+        
+            document.getElementById('respuesta_animo'),
+            document.getElementById('respuesta_mes'),
+            document.getElementById('respuesta_dia_semana'),
+                document.getElementById('respuesta_numero_dia_unidades'),
+            document.getElementById('respuesta_numero_dia_decenas'),
+            
+            
+                document.getElementById('respuesta_year_unidades'),
+            document.getElementById('respuesta_year_decenas'),
+                document.getElementById('respuesta_year_centenas'),
+            document.getElementById('respuesta_year_millares'),
+            
+            document.getElementById('respuesta_clima')
+        ],        
+        gravity:45,
         edge: 'inside',
     };
     
@@ -149,13 +277,22 @@ for (i = 0; i < figures.length; i++) {
     };
     
      window['figure'+i].onDragEnd = function(pointerXY) {
-        
+         console.log(pointerXY); 
+         
         var figure_id = this._id -1;
         var elemento = document.getElementById('figure'+figure_id);     
         elemento.classList.remove('zdepth-5');
-        elemento.classList.add('zdepth-1');
+        elemento.classList.add('zdepth-1');        
+       
     };
-    
+     window['figure'+i].onMove = function(pointerXY) {
+        //console.log(pointerXY);         
+         if(pointerXY.snapped===true){
+                var figure_id = this._id -1;
+                var imagen = document.getElementById('figure'+figure_id).firstChild;             
+                console.log(imagen.getAttribute('alt') + " ¡COLOCADO! en " + '');
+         }
+     };
 }
 
  /*   
