@@ -49,13 +49,32 @@
                 max-width: 100%;
                 height: auto;
             }
-			
+            h1{
+             
+                position: fixed;
+                text-shadow: 1px 1px 2px #000;
+                color: white;
+                top: 0%;
+                text-align: center;
+            }
+            #pregunta{
+                width: 180px;
+                position: fixed;
+                top: 12%;
+                height: 180px;
+                
+            }
 			#respuesta {
-				border: 4px solid grey;
+				border: 0px solid grey;
 				background-color: black;
 				opacity: 0.4;
-				width: 180px;
-				height: 180px;
+				width: 90px;
+				height: 90px;
+                border-radius: 10%;
+                position: fixed;
+                display: flex;                
+                align-self: center;
+                box-shadow: inset 0 0 10px #fff;
 			}
 
             .zdepth-1{box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;}
@@ -74,14 +93,20 @@
         </style>
 </head>
 <body class="">
-	
+    
+    <div class="zdepth-1" id="pregunta"><img src="./pictogramas/¿cómo estás.png" alt="" width="" height="" class="responsive" /></div>
+	<h1>¿Cómo estás hoy?</h1>
 	<div class="zdepth-1" id="respuesta"></div>
 	
-    <figure class="zdepth-1" id="salado" ><img src="./pictogramas/salado.png" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/picante.png" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/agradable.png" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/dulce.png" alt="" width="" height="" class="responsive" /></figure>
-    <figure class="zdepth-1"><img src="./pictogramas/amargo.png" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/contento.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/feliz.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/lloroso.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/sorprendido.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/triste.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/amistoso.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/aburrido.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/enfadado.jpg" alt="" width="" height="" class="responsive" /></figure>
+    <figure class="zdepth-1"><img src="./pictogramas/emociones/dudoso.jpg" alt="" width="" height="" class="responsive" /></figure>
 	<!--
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -93,55 +118,17 @@
 <script>
 //draggable = new PlainDraggable(document.getElementsByTagName('figure'));
 //draggable = new PlainDraggable(document.getElementById('pregunta'));
-var targetlist='';
+var respuesta = document.getElementById('respuesta'); 
 const figures = document.getElementsByTagName("figure");
 for (i = 0; i < figures.length; i++) {
 	window['figure'+i] = new PlainDraggable( figures[i] );
-	targetlist += 'figure'+i.snap+',';
+	window['figure'+i].snap = {
+        boundingBox: respuesta,
+        edge: 'inside',
+    };
 }
-for (i = 0; i < figures.length; i++) {
-	window['figure'+i].snap = {step: 90, targets:targetlist};
-}
+
 /*
-        $( "figure" ).draggable({
-            containment: "body",
-            cursor: "move",
-            scroll: false,
-            snap: true,
-            snapMode: "outer",
-            grid: [ 5, 5 ],
-            axis:"xy",
-            stack: "body figure",
-            start: function() {
-                $( this ).removeClass( "zdepth-1" );
-                $( this ).addClass( "zdepth-5" );
-            },
-            drag: function() {
-                
-            },
-            stop: function(e, ui) {
-                $( this ).removeClass( "zdepth-5" );
-                $( this ).addClass( "zdepth-1" );
-				var perc = ui.position.left / ui.helper.parent().width() * 100;
-				ui.helper.css('left', perc + '%');				
-            },
-        });
-		*/
-		/*
-$( "#droppable" ).droppable({
-      classes: {
-        "ui-droppable-active": "ui-state-active",
-        "ui-droppable-hover": "ui-state-hover"
-      },
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-            .html( "Dropped!" );
-      }
-    });
-	*/
- /*
 When a user first comes to your website, the only thing a service worker can do is be installed.
 Anything that’s inside the service worker, any of the functionalities it comes with, are not enabled until the user visits a second page on your site, or refreshes the current page. This is by design.
 */
