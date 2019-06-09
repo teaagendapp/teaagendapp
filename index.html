@@ -109,7 +109,13 @@
                 border-radius: 10px;
                 vertical-align: middle;
             }
-                      
+            .anterior:hover, .siguiente:hover{ 
+                background-color:green;
+            } 
+            .anterior img:hover, .siguiente img:hover, .anterior:hover img, .siguiente:hover img{ 
+                opacity:0.9;
+            } 
+       
 			.respuesta {
 				border: 0px solid grey;
 				background-color: black;
@@ -194,15 +200,15 @@
               	 <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/dia es.JPG" alt="" width="" height="" class="responsive" /></div>	
             <hr />
            
-            <button type="button" class="zdepth-1 anterior" id="">
+            <a class="zdepth-1 anterior" id="">
             <img src="./pictogramas/anterior.png" alt="" width="" height="" class="responsive" />        
-        </button>	
+        </a>	
          
            <div class="zdepth-1 respuesta" id="respuesta_dia_semana"></div>
          
-           <button type="button" class="zdepth-1 siguiente" id="">
+           <a class="zdepth-1 siguiente" id="">
             <img src="./pictogramas/siguiente.png" alt="" width="" height="" class="responsive" />        
-        </button>	
+            </a>	
             <hr />
             <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Lunes.png" alt="lunes" width="" height="" class="responsive" /></figure>        
          <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Martes.png" alt="martes" width="" height="" class="responsive" /></figure>
