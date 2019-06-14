@@ -4,15 +4,22 @@
         <meta name="robots" content="" />
 
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <title>TEA agendAPP</title>
-        <meta name="title" content="TEA agendAPP">
-        <meta name="description" content="una agenda con pictogramas">  
+        <meta name="title" content="TEA agendAPP" />
+        <meta name="description" content="Agenda de pictogramas"> 
+		<meta name="author" content="TFG UPM Campus sur">		
 		<link rel="shortcut icon" href="favicon.ico" />
+		
+		<meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+	<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+	information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+	and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+	<meta property="og:title" content="Mozilla Developer Network">
         
         <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
-        <!--
+        
+		<!--
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="{{title}}">
         <meta property="og:locale" content="{{og_locale}}">
@@ -201,15 +208,15 @@
               	 <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/dia es.JPG" alt="" width="" height="" class="responsive" /></div>	
             <hr />
            
-            <a class="zdepth-1 anterior" id="">
+        <a class="zdepth-1 anterior" id="">
             <img src="./pictogramas/anterior.png" alt="" width="" height="" class="responsive" />        
         </a>	
          
            <div class="zdepth-1 respuesta" id="respuesta_dia_semana"></div>
          
-           <a class="zdepth-1 siguiente" id="">
+         <a class="zdepth-1 siguiente" id="">
             <img src="./pictogramas/siguiente.png" alt="" width="" height="" class="responsive" />        
-            </a>	
+         </a>	
             <hr />
             <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Lunes.png" alt="lunes" width="" height="" class="responsive" /></figure>        
          <figure class="zdepth-1"><img src="./pictogramas/Dias Semana/Martes.png" alt="martes" width="" height="" class="responsive" /></figure>
@@ -237,7 +244,7 @@
          
            <div class="zdepth-1 siguiente" id="">
             <img src="./pictogramas/siguiente.png" alt="" width="" height="" class="responsive" />        
-        </div>	
+           </div>	
          
          
           
@@ -256,14 +263,22 @@
     
      <section id="year">
           <h1>¿Qué año es?</h1>
+		<hr />
+		<div class="zdepth-1 anterior" id="">
+        <img src="./pictogramas/anterior.png" alt="" width="" height="" class="responsive" />        
+		</div>
          
-          <hr />
             <div class="zdepth-1 respuesta" id="respuesta_year_unidades"></div>
             <div class="zdepth-1 respuesta" id="respuesta_year_decenas"></div>
             <div class="zdepth-1 respuesta" id="respuesta_year_centenas"></div>
             <div class="zdepth-1 respuesta" id="respuesta_year_millares"></div>
-            <hr />
-            <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 1.jpg" alt="uno" width="" height="" class="responsive" /></figure>
+         
+		  
+		  <div class="zdepth-1 siguiente" id="">
+          <img src="./pictogramas/siguiente.png" alt="" width="" height="" class="responsive" />        
+           </div>
+		 <hr /> 
+         <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 1.jpg" alt="uno" width="" height="" class="responsive" /></figure>
          <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 2.jpg" alt="dos" width="" height="" class="responsive" /></figure>
          <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 3.jpg" alt="tres" width="" height="" class="responsive" /></figure>
          <figure class="zdepth-1"><img src="./pictogramas/numeros/carta 4.jpg" alt="cuatro" width="" height="" class="responsive" /></figure>
@@ -278,15 +293,24 @@
       <section id="clima">
           <h1>¿Qué tiempo hace?</h1>
            <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/¿cómo está el clima.png" alt="" width="" height="" class="responsive" /></div>
-          <hr />
-            <div class="zdepth-1 respuesta" id="respuesta_clima"></div>           
-            <hr />
-        <figure class="zdepth-1"><img src="./pictogramas/el tiempo/lluvia.jpg" alt="lluvia" width="" height="" class="responsive" /></figure>         
-          <figure class="zdepth-1"><img src="./pictogramas/el tiempo/sol.jpg" alt="sol" width="" height="" class="responsive" /></figure>
-          <figure class="zdepth-1"><img src="./pictogramas/el tiempo/nube.jpg" alt="nubes" width="" height="" class="responsive" /></figure>
-          <figure class="zdepth-1"><img src="./pictogramas/el tiempo/nieve.jpg" alt="nieve" width="" height="" class="responsive" /></figure>
-          <figure class="zdepth-1"><img src="./pictogramas/el tiempo/trueno.jpg" alt="truenos" width="" height="" class="responsive" /></figure>
-    
+        <hr />
+		  
+		  <div class="zdepth-1 anterior" id="">
+          <img src="./pictogramas/anterior.png" alt="" width="" height="" class="responsive" />        
+		  </div>
+          <div class="zdepth-1 respuesta" id="respuesta_clima"></div>   
+				
+        <hr />
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/sol.jpg" alt="sol" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/tiempo/lluvia.jpg" alt="lluvia" width="" height="" class="responsive" /></figure>         
+        <figure class="zdepth-1"><img src="./pictogramas/tiempo/nube.jpg" alt="nubes" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/tiempo/nieve.jpg" alt="nieve" width="" height="" class="responsive" /></figure>
+        <figure class="zdepth-1"><img src="./pictogramas/tiempo/trueno.jpg" alt="truenos" width="" height="" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/arco_iris.jpg" alt="arco_iris" width="" height="" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/granizo.jpg" alt="granizo" width="" height="" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/niebla.jpg" alt="niebla" width="" height="" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/sol_nube.jpg" alt="sol_nube" width="" height="" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/viento.jpg" alt="viento" width="" height="" class="responsive" /></figure>
      </section> 
     
 	<!--
