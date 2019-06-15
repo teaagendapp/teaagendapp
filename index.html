@@ -310,7 +310,7 @@
 	</section> 
 	
     <section id="clima">
-        <h1>¿Qué tiempo hace?</h1>
+        <h1>¿Qué tiempo hace hoy?</h1>
         <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/¿cómo está el clima.png" style="max-width:100%;height:auto;" class="responsive" /></div>
         <hr />
 		<button class="zdepth-1 anterior" id="">
@@ -374,6 +374,9 @@
 		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/ahora.jpg" style="max-width:60%;height:auto;" class="responsive" /></div>
 		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/despues.jpg" style="max-width:60%;height:auto;" class="responsive" /></div>
 		<hr>
+		<button class="zdepth-1 anterior" id="">
+        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+		</button>
 		<div class="zdepth-1 respuesta" id="respuesta_antes" style="float: left;"></div> 
         <div class="zdepth-1 respuesta" id="respuesta_ahora" style="float: center;"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_despues" style="float: right;"></div> 
@@ -423,13 +426,16 @@ for (i = 0; i < figures.length; i++) {
             document.getElementById('respuesta_dia_semana'),
             document.getElementById('respuesta_numero_dia_unidades'),
             document.getElementById('respuesta_numero_dia_decenas'),
-            document.getElementById('respuesta_year_unidades'),
-            document.getElementById('respuesta_year_decenas'),
-            document.getElementById('respuesta_year_centenas'),
-            document.getElementById('respuesta_year_millares'),
-			/*document.getElementById('respuesta_estacion')*/
-			document.getElementById('respuesta_clima')
-			/*document.getElementById('respuesta_quiero')*/
+            /*document.getElementById('respuesta_year_unidades'),*/
+            /*document.getElementById('respuesta_year_decenas'),*/
+            /*document.getElementById('respuesta_year_centenas'),*/
+            /*document.getElementById('respuesta_year_millares'),*/
+			document.getElementById('respuesta_estacion'),
+			document.getElementById('respuesta_clima'),
+			document.getElementById('respuesta_quiero'),
+			document.getElementById('respuesta_antes'),
+			document.getElementById('respuesta_ahora'),
+			document.getElementById('respuesta_despues')
 			
 			
         ],        
