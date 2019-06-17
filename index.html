@@ -425,89 +425,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" crossorigin="anonymous"></script>
 	-->
 	<script src="store.everything.min.js"></script>
-	<script src="plain-draggable.min.js"></script>
-	
-<script>
-//draggable = new PlainDraggable(document.getElementsByTagName('figure'));
-//draggable = new PlainDraggable(document.getElementById('pregunta'));
-//var respuesta = document.getElementById('respuesta'); 
-const figures = document.getElementsByTagName("figure");
-for (i = 0; i < figures.length; i++) {
-    figures[i].id = "figure"+i;
-    
-	window['figure'+i] = new PlainDraggable( figures[i] );
-	window['figure'+i].snap = {
-        targets: [
-        
-            document.getElementById('respuesta_animo'),
-            document.getElementById('respuesta_mes'),
-            document.getElementById('respuesta_dia_semana'),
-            document.getElementById('respuesta_numero_dia_unidades'),
-            document.getElementById('respuesta_numero_dia_decenas'),
-            /*document.getElementById('respuesta_year_unidades'),*/
-            /*document.getElementById('respuesta_year_decenas'),*/
-            /*document.getElementById('respuesta_year_centenas'),*/
-            /*document.getElementById('respuesta_year_millares'),*/
-			document.getElementById('respuesta_estacion'),
-			document.getElementById('respuesta_clima'),
-			document.getElementById('respuesta_quiero'),
-			document.getElementById('respuesta_antes'),
-			document.getElementById('respuesta_ahora'),
-			document.getElementById('respuesta_despues')
-			
-			
-        ],        
-        gravity:45,
-        edge: 'inside',
-    };
-    
-    window['figure'+i].onDragStart = function(pointerXY) {
-       
-        var figure_id = this._id -1;
-        var elemento = document.getElementById('figure'+figure_id);      
-        elemento.classList.remove('zdepth-1');
-        elemento.classList.add('zdepth-5');
-    };
-    
-     window['figure'+i].onDragEnd = function(pointerXY) {
-         console.log(pointerXY); 
-         
-        var figure_id = this._id -1;
-        var elemento = document.getElementById('figure'+figure_id);     
-        elemento.classList.remove('zdepth-5');
-        elemento.classList.add('zdepth-1');        
-       
-    };
-     window['figure'+i].onMove = function(pointerXY) {
-        //console.log(pointerXY);         
-         if(pointerXY.snapped===true){
-                var figure_id = this._id -1;
-                var imagen = document.getElementById('figure'+figure_id).firstChild;             
-                console.log(imagen.getAttribute('alt') + " ¡COLOCADO! en " + '');
-         }
-     };
-}
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
- /*   
-figure1.onDrag = function(newPosition) {
-  return !!newPosition.snapped; //se queda anclado adonde se haya snapeado
-};
-*/
-    
-/*
-When a user first comes to your website, the only thing a service worker can do is be installed.
-Anything that’s inside the service worker, any of the functionalities it comes with, are not enabled until the user visits a second page on your site, or refreshes the current page. This is by design.
-*/
-/*
-// Check that service workers are registered
-if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
-*/
+<script>
+$( document ).ready(function() {
+	$('figure').draggable({ 
+	containment: "parent",
+	scroll: false,
+	revert: function() {
+		if ($(this).hasClass('drag-revert')) {
+		  $(this).removeClass('drag-revert');
+		  return true;
+		}
+	},
+	snap: ".respuesta",
+	snapMode: "inner",
+	snapTolerance: 50,
+	
+	grid: [ 10, 10 ],
+	
+	drag: function() {
+		$(this).removeClass('zdepth-1');
+		$(this).addClass('zdepth-5');
+    },
+	stop: function(){
+		$(this).removeClass('zdepth-5');
+		$(this).addClass('zdepth-1');
+	},
+	
+	});
+	var count = 0;
+	$('.respuesta').droppable( {
+		accept: 'figure',
+		drop: function(event, ui) {//Triggered when an accepted draggable is dropped ON the droppable
+			count++;			
+			if ( count > 1  ) { //si ya hay más de una pegatina ocupando el sitio...		
+				count--;			
+				return $(ui.draggable).addClass('drag-revert');
+				
+			}
+			
+			//console.log( 'The square with ID "' + ui.draggable.find('img').attr('alt') + '" was dropped onto me!' );
+			//console.log("hay pegatinas: " + count);
+		
+		},	
+		out: function( event, ui ) {//Triggered when an accepted draggable is dragged OUT of the droppable
+			count--;
+			//console.log("hay pegatinas: " + count);
+		},
+		
+	} );
+
+    //console.log( "ready!" );
+});
+
 </script>
-    
 </body>
 </html>
