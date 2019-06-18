@@ -444,17 +444,22 @@ $( document ).ready(function() {
 	},
 	snap: ".respuesta",
 	snapMode: "inner",
-	snapTolerance: 50,
-	
+	snapTolerance: 20,
+
 	grid: [ 5, 5 ],
 	
+	start : function(e){
+             $(this).css({'pointer-events': 'none'});
+    }, 
 	drag: function() {
+	 
 		$(this).removeClass('zdepth-1');
-		$(this).addClass('zdepth-5');
+		$(this).addClass('zdepth-5');		
     },
 	stop: function(){
 		$(this).removeClass('zdepth-5');
 		$(this).addClass('zdepth-1');
+		$(this).css({'pointer-events': 'all'});
 	},
 	
 	});
@@ -465,12 +470,8 @@ $( document ).ready(function() {
 		drop: function(event, ui) {//Triggered when an accepted draggable is dropped ON the droppable
 		
 			var sticker_id = $(ui.draggable)[0].children[0].alt;
-			//console.log(sticker_id);
-		
-			store.each(function(value, key) {
-				console.log(key, '==', value)
-			});
-		
+			console.log(sticker_id);
+
 			var respuesta_id = $(this).attr("id");
 			
 			if(!store.get(respuesta_id)){			
@@ -489,7 +490,12 @@ $( document ).ready(function() {
 		},
 		
 	} );
+/*
 
+	store.each(function(value, key) {
+				console.log(key, '==', value)
+			});
+*/
     //console.log( "ready!" );
 });
 
