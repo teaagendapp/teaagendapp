@@ -6,21 +6,21 @@
 	<meta charset="UTF-8" />
 	<!-- Compatibilidad de Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
+
 	<!-- Forzamos a que el ancho de la página se adapte al dispositivo-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">     
-			
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>TEA agendAPP</title>
-	<meta name="description" content="Agenda de pictogramas"/> 
+	<meta name="description" content="Agenda de pictogramas"/>
 	<link rel="canonical" href="https://teaagendapp.github.io/"/>
 	<meta name="author" content="Marta Ortega Ferrero para UPM Campus sur"/>
 	<meta name="robots" content="all"/>
-		
-	<meta name="twitter: card"  content = "summary" /> 
-	<meta name="twitter: title" content = "TEA agendAPP"/> 
+
+	<meta name="twitter: card"  content = "summary" />
+	<meta name="twitter: title" content = "TEA agendAPP"/>
 	<meta name="twitter:image"  content="favicon32.png" />
-	<meta name="twitter: description"  content = "Agenda con pictogramas para niños TEA" /> 
-	
+	<meta name="twitter: description"  content = "Agenda con pictogramas para niños TEA" />
+
 	<meta property="og:locale" content="es_ES" />
 	<meta property="og:title" content="TEA agendAPP" />
 	<meta property="og:description" content="Trabajo Fin de Grado: Agenda de pictogramas para niños TEA"/>
@@ -32,157 +32,32 @@
 	<meta property="og:url" content="https://teaagendapp.github.io/"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:site_name" content="TEA agendAPP"/>
-	
+
 	<meta property="website" content="https://teaagendapp.github.io" />
-	
+
 	<!-- Carga de Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon200.png">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" type="image/png" href="favicon32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="favicon200.png" sizes="200x200">
 	<link rel="icon" type="image/png" href="favicon500.png" sizes="500x500">
-	
-	
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
-	
-	
-    
-	<style>
-            body{
-                padding:0;margin:0;border:0;
-                min-height:100vh; 
-				width:100%;
-				height:100%;
-                overflow: auto;
-            
-                /*
-                display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center; align-items:center;align-content:center;
-                */
-                font-family: 'Montserrat', sans-serif;
-            }
-            section{
-                padding:0;margin:0;border:0;
-                
-				width:100%;
-				min-height:100vh;
-                overflow: auto;              
-                display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center; align-items:center;align-content:center;
-                background:radial-gradient(circle, rgba(255,255,255,0.5046393557422969) 10%, rgba(17,17,17,1) 200%),url(mesa_madera_textura.jpg) no-repeat center center / cover fixed;
-             
-            }
-	        figure{
-                padding:0;margin:5px;border:0;
-                width:90px;
-				height:auto;
-				
-                border-radius:10px;
-				touch-action: none;
-				box-sizing: border-box;
-				user-select: none;
-				-webkit-transform: translate(0px, 0px);
-				transform: translate(0px, 0px);
-            }
-			
-            figure img{
-                border-radius:10px;
-                margin:0px;
-                vertical-align: middle;
-                border: 0;
-                padding: 0;
-            }
-            .responsive{
-                max-width: 100%;
-                height: auto;
-            }
-            
-            h1{
-                position: relative;
-                text-shadow: 1px 1px 2px #ccc;
-                color: #333;
-                text-align: center;
-                width: 100%;
-                margin: 0;        
-                text-transform: uppercase;
-                padding: 0;
-                margin: 15px 0;
-                font-size: 3rem;
-            }
-            
-            hr{width:100%;    border: 0;}
-            
-            .pregunta{
-                width: 180px;
-                height:auto;
-                position: relative;
-                border-radius: 0px;
-               
-                
-            }
-            .pregunta img{
-                border-radius: 0px;
-                vertical-align: middle;
-            }
-            .anterior, .siguiente{
-                width: 90px;
-                height:auto;
-                position: relative;
-                border-radius: 0px;
-                margin: 0px 10px;
-                padding: 0;
-                border: 0;
-            }
-            .anterior img, .siguiente img{
-                border-radius: 0px;
-                vertical-align: middle;
-            }
-            .anterior:hover, .siguiente:hover{ 
-                background-color:green;
-            } 
-            .anterior img:hover, .siguiente img:hover, .anterior:hover img, .siguiente:hover img{ 
-                opacity:0.9;
-            } 
-       
-			.respuesta {
-				border: 0px solid grey;
-				background-color: black;
-				opacity: 0.4;
-				width: 90px;
-				height: 90px;
-                border-radius: 10px;
-                position: relative;
-                display: flex;                
-                align-self: center;           
-			}
 
-            .zdepth-1{box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;}
-            .zdepth-2{box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;}
-            .zdepth-3{box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23) 0px 6px 10px;}
-            .zdepth-4{box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px, rgba(0, 0, 0, 0.22) 0px 10px 18px;}
-            .zdepth-5{box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px;}
-                        
-			/*
-			@media only screen and (max-width: 480px) {
-				body{display: flex;flex-direction:column;flex-wrap: wrap;justify-content: center; align-items:center;align-content:flex-start;}				
-			}
-			@media only screen and (max-width: 768px) {
-				
-			}
-			*/
-        </style>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
+
     <section id="animo">
         <h1 style="color:#0000FF;">¿Cómo estás hoy?</h1>
         <div class="zdepth-1 pregunta" id="">
-		<img src="./pictogramas/¿cómo estás.png" style="max-width:100%;height:auto;" class="responsive" />
-		</div>	
+			<img src="./pictogramas/¿cómo estás.png" style="max-width:100%;height:auto;" class="responsive" />
+		</div>
         <hr />
         <div class="zdepth-1 respuesta" id="respuesta_animo">
 		</div>
         <button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
         <hr />
         <figure class="zdepth-1"><img src="./pictogramas/emociones/aburrido_1.jpg" alt="aburrido" style="max-width:100%;height:auto;" class="responsive" /></figure>
         <figure class="zdepth-1"><img src="./pictogramas/emociones/alegre_1.jpg" alt="alegre" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -197,32 +72,32 @@
     </section>
 	<!--
 	<section id="fecha" >
-		<h1> Vamos a poner la fecha </h1>		
+		<h1> Vamos a poner la fecha </h1>
 		<div class="zdepth-1 pregunta" id="">
 		<img src="./pictogramas/poner_fecha.jpg" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
 		<button class="zdepth-1 anterior" id="">
-		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
 		<button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>		
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 	</section>
 	-->
 	<section id="dias_semana">
 		<h1 style="color:#FF0000;">¿Qué día de la semana es?</h1>
 		<div class="zdepth-1 pregunta" id="">
-		<img src="./pictogramas/dia_es.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>	
+		<img src="./pictogramas/dia_es.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr>
 		<button class="zdepth-1 anterior" id="">
-		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 		<div class="zdepth-1 respuesta" id="respuesta_dia_semana"></div>
 		<button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 		<hr>
-		<figure class="zdepth-1"><img src="./pictogramas/dia/lunes_1.jpg" alt="lunes" style="max-width:100%;height:auto;" class="responsive" /></figure>        
+		<figure class="zdepth-1"><img src="./pictogramas/dia/lunes_1.jpg" alt="lunes" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/dia/martes_1.jpg" alt="martes" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/dia/miercoles_1.jpg" alt="miércoles" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/dia/jueves_1.jpg" alt="jueves" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -230,19 +105,19 @@
 		<figure class="zdepth-1"><img src="./pictogramas/dia/sabado_1.jpg" alt="sábado" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/dia/domingo_1.jpg" alt="domingo" style="max-width:100%;height:auto;" class="responsive" /></figure>
 	</section>
-	
+
 	<section id="numero_dia">
 		<h1 style="color:#FF0000;">¿Qué día del mes es?</h1>
-		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/numero es.png" style="max-width:100%;height:auto;" class="responsive" /></div>	
+		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/numero es.png" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
 		<button class="zdepth-1 anterior" id="">
-		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 		<div class="zdepth-1 respuesta" id="respuesta_numero_dia_unidades"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_numero_dia_decenas"></div>
 		<button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 		<hr />
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 1.jpg" alt="uno" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 2.jpg" alt="dos" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -254,19 +129,19 @@
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 8.jpg" alt="ocho" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 9.jpg" alt="nueve" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/cartas 0.jpg" alt="cero" style="max-width:100%;height:auto;" class="responsive" /></figure>
-	</section> 
-	
+	</section>
+
 	<section id="meses">
 		<h1 style="color:#FF0000;">¿En qué mes estamos?</h1>
-		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/mes.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>	
+		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/mes.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
 		<button class="zdepth-1 anterior" id="">
-		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 		<div class="zdepth-1 respuesta" id="respuesta_mes"></div>
 		<button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
-		</button>	
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
+		</button>
 		<hr />
 		<figure class="zdepth-1"><img src="./pictogramas/Meses/1 Enero.png" alt="enero" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/Meses/2 Febrero.png" alt="febrero" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -287,16 +162,16 @@
 		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/año.png" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
 		<button class="zdepth-1 anterior" id="">
-		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
 		<div class="zdepth-1 respuesta" id="respuesta_year_unidades"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_year_decenas"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_year_centenas"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_year_millares"></div>
 		<button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
-		<hr /> 
+		<hr />
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 1.jpg" alt="uno" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 2.jpg" alt="dos" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 3.jpg" alt="tres" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -308,40 +183,40 @@
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/carta 9.jpg" alt="nueve" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/numeros/cartas 0.jpg" alt="cero" style="max-width:100%;height:auto;" class="responsive" /></figure>
 	</section>
-	 -->   
+	 -->
 	<section id="estacion">
         <h1 style="color:#ffd800;">¿En qué estación estamos?</h1>
 		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/estaciones del año.png" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
 		<button class="zdepth-1 anterior" id="">
-        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
         <div class="zdepth-1 respuesta" id="respuesta_estacion"></div>
         <button class="zdepth-1 siguiente" id="">
-        <img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
+        <img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
         </button>
-		<hr /> 
+		<hr />
 		<figure class="zdepth-1"><img src="./pictogramas/estaciones/invierno.jpg" alt="invierno" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/estaciones/otono.jpg" alt="otoño" style="max-width:100%;height:auto;" class="responsive" /></figure>
         <figure class="zdepth-1"><img src="./pictogramas/estaciones/primavera.jpg" alt="primavera" style="max-width:100%;height:auto;" class="responsive" /></figure>
         <figure class="zdepth-1"><img src="./pictogramas/estaciones/verano.jpg" alt="verano" style="max-width:100%;height:auto;" class="responsive" /></figure>
-	</section> 
-	
+	</section>
+
     <section id="clima">
         <h1 style="color:#ffd800;">¿Qué tiempo hace hoy?</h1>
         <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/¿cómo está el clima.png" style="max-width:100%;height:auto;" class="responsive" /></div>
         <hr />
 		<button class="zdepth-1 anterior" id="">
-        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
-        <div class="zdepth-1 respuesta" id="respuesta_clima"></div>  
+        <div class="zdepth-1 respuesta" id="respuesta_clima"></div>
 		<button class="zdepth-1 siguiente" id="">
-		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
+		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
 		<hr />
 		<figure class="zdepth-1"><img src="./pictogramas/tiempo/arco_iris.jpg" alt="arco_iris" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/tiempo/granizo.jpg" alt="granizo" style="max-width:100%;height:auto;" class="responsive" /></figure>
-		<figure class="zdepth-1"><img src="./pictogramas/tiempo/lluvia.jpg" alt="lluvia" style="max-width:100%;height:auto;" class="responsive" /></figure> 
+		<figure class="zdepth-1"><img src="./pictogramas/tiempo/lluvia.jpg" alt="lluvia" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/tiempo/niebla.jpg" alt="niebla" style="max-width:100%;height:auto;" class="responsive" /></figure>
         <figure class="zdepth-1"><img src="./pictogramas/tiempo/nieve.jpg" alt="nieve" style="max-width:100%;height:auto;" class="responsive" /></figure>
         <figure class="zdepth-1"><img src="./pictogramas/tiempo/nube.jpg" alt="nube" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -351,23 +226,23 @@
    		<figure class="zdepth-1"><img src="./pictogramas/tiempo/tormenta.jpg" alt="tormenta" style="max-width:100%;height:auto;" class="responsive" /></figure>
         <figure class="zdepth-1"><img src="./pictogramas/tiempo/trueno.jpg" alt="truenos" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/tiempo/viento.jpg" alt="viento" style="max-width:100%;height:auto;" class="responsive" /></figure>
-    </section> 
+    </section>
 	<section id="quiero">
         <h1 style="color:#00c0ff;" >Quiero...</h1>
         <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/quiero.png" style="max-width:100%;height:auto;" class="responsive" /></div>
         <hr />
 		<button class="zdepth-1 anterior" id="">
-        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
-        <div class="zdepth-1 respuesta" id="respuesta_quiero"></div> 
+        <div class="zdepth-1 respuesta" id="respuesta_quiero"></div>
 		<button class="zdepth-1 siguiente" id="">
-        <img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />        
+        <img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
         </button>
 		<hr />
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/andar.jpg" alt="andar" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/ayudar.jpg" alt="ayudar" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/bailar.jpg" alt="bailar" style="max-width:100%;height:auto;" class="responsive" /></figure>
-		<figure class="zdepth-1"><img src="./pictogramas/quiero/beber.jpg" alt="beber" style="max-width:100%;height:auto;" class="responsive" /></figure> 
+		<figure class="zdepth-1"><img src="./pictogramas/quiero/beber.jpg" alt="beber" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/comer.jpg" alt="comer" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/comprar.jpg" alt="comprar" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/correr.jpg" alt="correr" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -382,7 +257,7 @@
         <figure class="zdepth-1"><img src="./pictogramas/quiero/pintar.jpg" alt="pintar" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/trabajar.jpg" alt="trabajar" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/quiero/ver_tv.jpg" alt="television" style="max-width:100%;height:auto;" class="responsive" /></figure>
-    </section> 
+    </section>
 	<section id="colegio">
         <h1 style="color:#00c0ff;">Actividades en el colegio</h1>
 		<br>
@@ -393,20 +268,20 @@
 		<div class="zdepth-1 pregunta" id="etiqueta_despues"><img src="./pictogramas/despues.jpg" style="max-width:60%;height:auto;" class="responsive" /></div>
 		<hr>
 		<button class="zdepth-1 anterior" id="">
-        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />        
+        <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</button>
-		<div class="zdepth-1 respuesta" id="respuesta_antes" style="float: left;"></div> 
+		<div class="zdepth-1 respuesta" id="respuesta_antes" style="float: left;"></div>
         <div class="zdepth-1 respuesta" id="respuesta_ahora" style="float: center;"></div>
-		<div class="zdepth-1 respuesta" id="respuesta_despues" style="float: right;"></div> 
+		<div class="zdepth-1 respuesta" id="respuesta_despues" style="float: right;"></div>
 		<hr>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/apoyo.jpg" alt="apoyo" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/artistica.jpg" alt="plastica" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/asamblea.jpg" alt="asamblea" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/casa.jpg" alt="casa" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/EF.jpg" alt="EF" style="max-width:100%;height:auto;" class="responsive" /></figure>
-		<figure class="zdepth-1"><img src="./pictogramas/actividades/estimulacion.jpg" alt="estimulacion" style="max-width:100%;height:auto;" class="responsive" /></figure> 
-		<figure class="zdepth-1"><img src="./pictogramas/actividades/excursion.jpg" alt="excursion" style="max-width:100%;height:auto;" class="responsive" /></figure> 
-		<figure class="zdepth-1"><img src="./pictogramas/actividades/fiesta.jpg" alt="fiesta" style="max-width:100%;height:auto;" class="responsive" /></figure> 
+		<figure class="zdepth-1"><img src="./pictogramas/actividades/estimulacion.jpg" alt="estimulacion" style="max-width:100%;height:auto;" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/actividades/excursion.jpg" alt="excursion" style="max-width:100%;height:auto;" class="responsive" /></figure>
+		<figure class="zdepth-1"><img src="./pictogramas/actividades/fiesta.jpg" alt="fiesta" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/fisioterapia.jpg" alt="fisioterapia" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/huerto.jpg" alt="huerto" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/lengua.jpg" alt="lengua" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -417,7 +292,7 @@
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/psicomotricidad.jpg" alt="psicomotricidad" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/recreo.jpg" alt="recreo" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/sociales.jpg" alt="sociales" style="max-width:100%;height:auto;" class="responsive" /></figure>
-    </section> 
+    </section>
 
 	<script src="store.everything.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -433,7 +308,7 @@ $( document ).ready(function() {
 
 	localStorage.clear();
 
-	$('figure').draggable({ 
+	$('figure').draggable({
 	containment: "parent",
 	scroll: false,
 	revert: function() {
@@ -447,48 +322,48 @@ $( document ).ready(function() {
 	snapTolerance: 20,
 
 	grid: [ 5, 5 ],
-	
+
 	start : function(e){
              $(this).css({'pointer-events': 'none'});
-    }, 
+    },
 	drag: function() {
-	 
+
 		$(this).removeClass('zdepth-1');
-		$(this).addClass('zdepth-5');		
+		$(this).addClass('zdepth-5');
     },
 	stop: function(){
 		$(this).removeClass('zdepth-5');
 		$(this).addClass('zdepth-1');
 		$(this).css({'pointer-events': 'all'});
 	},
-	
+
 	});
-		
+
 	//$('.respuesta').on("droppable", function () {
 	$('.respuesta').droppable( {
 		accept: 'figure',
 		drop: function(event, ui) {//Triggered when an accepted draggable is dropped ON the droppable
-		
+
 			var sticker_id = $(ui.draggable)[0].children[0].alt;
 			console.log(sticker_id);
 
 			var respuesta_id = $(this).attr("id");
-			
-			if(!store.get(respuesta_id)){			
+
+			if(!store.get(respuesta_id)){
 				store.set(respuesta_id, { sticker: sticker_id })
 			}else{
-				return $(ui.draggable).addClass('drag-revert');	
-				
+				return $(ui.draggable).addClass('drag-revert');
+
 			}
 
-		},	
-		out: function( event, ui ) {//Triggered when an accepted draggable is dragged OUT of the droppable
-		
-			var respuesta_id = $(this).attr("id");		
-			store.remove(respuesta_id);
-			
 		},
-		
+		out: function( event, ui ) {//Triggered when an accepted draggable is dragged OUT of the droppable
+
+			var respuesta_id = $(this).attr("id");
+			store.remove(respuesta_id);
+
+		},
+
 	} );
 /*
 
