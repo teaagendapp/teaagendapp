@@ -59,11 +59,5 @@ $( document ).ready(function() {
         },
 
     } );
-    /*
-
-        store.each(function(value, key) {
-                    console.log(key, '==', value)
-                });
-    */
-    //console.log( "ready!" );
+   
 });
