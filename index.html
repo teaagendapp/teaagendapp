@@ -39,15 +39,22 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<section id="cabecera">
+		<img src="./pictogramas/avatar.png" style="max-width:100%;height:auto;" class="responsive" />
+		<h1 style="color:#ff8000;">Hola Marta</h1>
+		<a href="#animo" >
+		  <img src="./pictogramas/hola.jpg" style="max-width:100%;height:auto;" class="responsive" />
+		 </a>
+	</section>
     <section id="animo">
         <h1 style="color:#0000FF;">¿Cómo estás hoy?</h1>
-        <div class="zdepth-1 pregunta" id="">
+        <div class="zdepth-1 pregunta">
 			<img src="./pictogramas/¿cómo estás.png" style="max-width:100%;height:auto;" class="responsive" />
 		</div>
         <hr />
         <div class="zdepth-1 respuesta" id="respuesta_animo">
 		</div>
-        <a href="#dias_semana" class="zdepth-1 siguiente" id="">
+        <a href="#dias_semana" class="zdepth-1 siguiente">
 			<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
         <hr />
@@ -65,14 +72,14 @@
 
 	<section id="dias_semana">
 		<h1 style="color:#FF0000;">¿Qué día de la semana es?</h1>
-		<div class="zdepth-1 pregunta" id="">
+		<div class="zdepth-1 pregunta" >
 		<img src="./pictogramas/dia_es.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr>
-		<a href="#animo" class="zdepth-1 anterior" id="">
+		<a href="#animo" class="zdepth-1 anterior">
 			<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<div class="zdepth-1 respuesta" id="respuesta_dia_semana"></div>
-		<a href="#numero_dia" class="zdepth-1 siguiente" id="">
+		<a href="#numero_dia" class="zdepth-1 siguiente">
 			<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<hr>
@@ -87,14 +94,14 @@
 
 	<section id="numero_dia">
 		<h1 style="color:#FF0000;">¿Qué día del mes es?</h1>
-		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/numero es.png" style="max-width:100%;height:auto;" class="responsive" /></div>
+		<div class="zdepth-1 pregunta" ><img src="./pictogramas/numero es.png" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
-		<a href="#dias_semana" class="zdepth-1 anterior" id="">
+		<a href="#dias_semana" class="zdepth-1 anterior">
 		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<div class="zdepth-1 respuesta" id="respuesta_numero_dia_unidades"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_numero_dia_decenas"></div>
-		<a href="#meses" class="zdepth-1 siguiente" id="">
+		<a href="#meses" class="zdepth-1 siguiente">
 		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<hr />
@@ -112,13 +119,13 @@
 
 	<section id="meses">
 		<h1 style="color:#FF0000;">¿En qué mes estamos?</h1>
-		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/mes.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>
+		<div class="zdepth-1 pregunta" ><img src="./pictogramas/mes.JPG" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
-		<a href="#numero_dia" class="zdepth-1 anterior" id="">
+		<a href="#numero_dia" class="zdepth-1 anterior" >
 		<img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<div class="zdepth-1 respuesta" id="respuesta_mes"></div>
-		<a href="#estacion" class="zdepth-1 siguiente" id="">
+		<a href="#estacion" class="zdepth-1 siguiente" >
 		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<hr />
@@ -138,13 +145,13 @@
 
 	<section id="estacion">
         <h1 style="color:#ffd800;">¿En qué estación estamos?</h1>
-		<div class="zdepth-1 pregunta" id=""><img src="./pictogramas/estaciones del año.png" style="max-width:100%;height:auto;" class="responsive" /></div>
+		<div class="zdepth-1 pregunta" ><img src="./pictogramas/estaciones del año.png" style="max-width:100%;height:auto;" class="responsive" /></div>
 		<hr />
-		<a href="#meses" class="zdepth-1 anterior" id="">
+		<a href="#meses" class="zdepth-1 anterior" >
         <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
         <div class="zdepth-1 respuesta" id="respuesta_estacion"></div>
-        <a href="#clima" class="zdepth-1 siguiente" id="">
+        <a href="#clima" class="zdepth-1 siguiente" >
         <img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
         </a>
 		<hr />
@@ -156,13 +163,13 @@
 
     <section id="clima">
         <h1 style="color:#ffd800;">¿Qué tiempo hace hoy?</h1>
-        <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/¿cómo está el clima.png" style="max-width:100%;height:auto;" class="responsive" /></div>
+        <div class="zdepth-1 pregunta" ><img src="./pictogramas/¿cómo está el clima.png" style="max-width:100%;height:auto;" class="responsive" /></div>
         <hr />
-		<a href="#estacion" class="zdepth-1 anterior" id="">
+		<a href="#estacion" class="zdepth-1 anterior">
         <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
         <div class="zdepth-1 respuesta" id="respuesta_clima"></div>
-		<a href="#quiero" class="zdepth-1 siguiente" id="">
+		<a href="#quiero" class="zdepth-1 siguiente">
 		<img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<hr />
@@ -181,13 +188,13 @@
     </section>
 	<section id="quiero">
         <h1 style="color:#00c0ff;" >Quiero...</h1>
-        <div class="zdepth-1 pregunta" id=""><img src="./pictogramas/quiero.png" style="max-width:100%;height:auto;" class="responsive" /></div>
+        <div class="zdepth-1 pregunta" ><img src="./pictogramas/quiero.png" style="max-width:100%;height:auto;" class="responsive" /></div>
         <hr />
-		<a href="#clima" class="zdepth-1 anterior" id="">
+		<a href="#clima" class="zdepth-1 anterior" >
         <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
         <div class="zdepth-1 respuesta" id="respuesta_quiero"></div>
-		<a href="#colegio" class="zdepth-1 siguiente" id="">
+		<a href="#colegio" class="zdepth-1 siguiente">
         <img src="./pictogramas/siguiente.png" style="max-width:100%;height:auto;" class="responsive" />
         </a>
 		<hr />
@@ -219,12 +226,15 @@
 		<div class="zdepth-1 pregunta" id="etiqueta_ahora"><img src="./pictogramas/ahora.jpg" style="max-width:60%;height:auto;" class="responsive" /></div>
 		<div class="zdepth-1 pregunta" id="etiqueta_despues"><img src="./pictogramas/despues.jpg" style="max-width:60%;height:auto;" class="responsive" /></div>
 		<hr>
-		<a href="#quiero" class="zdepth-1 anterior" id="">
+		<a href="#quiero" class="zdepth-1 anterior">
         <img src="./pictogramas/anterior.png" style="max-width:100%;height:auto;" class="responsive" />
 		</a>
 		<div class="zdepth-1 respuesta" id="respuesta_antes" style="float: left;"></div>
         <div class="zdepth-1 respuesta" id="respuesta_ahora" style="float: center;"></div>
 		<div class="zdepth-1 respuesta" id="respuesta_despues" style="float: right;"></div>
+		<a href="#pie_pagina" class="zdepth-1 anterior">
+        <img src="./pictogramas/acabar.jpg" style="max-width:100%;height:auto;" class="responsive" />
+		</a>
 		<hr>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/apoyo.jpg" alt="apoyo" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/artistica.jpg" alt="plastica" style="max-width:100%;height:auto;" class="responsive" /></figure>
@@ -245,6 +255,9 @@
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/recreo.jpg" alt="recreo" style="max-width:100%;height:auto;" class="responsive" /></figure>
 		<figure class="zdepth-1"><img src="./pictogramas/actividades/sociales.jpg" alt="sociales" style="max-width:100%;height:auto;" class="responsive" /></figure>
     </section>
+	<section id="pie_pagina">
+		  <img src="./pictogramas/adios.jpg" style="max-width:100%;height:auto;" class="responsive" />
+	</section>
 
 	<script src="store.everything.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

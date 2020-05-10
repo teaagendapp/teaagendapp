@@ -33,7 +33,6 @@ $( document ).ready(function() {
 
     });
 
-    //$('.respuesta').on("droppable", function () {
     $('.respuesta').droppable( {
         accept: 'figure',
         drop: function(event, ui) {//Triggered when an accepted draggable is dropped ON the droppable
@@ -51,7 +50,7 @@ $( document ).ready(function() {
             }
 
         },
-        out: function( event, ui ) {//Triggered when an accepted draggable is dragged OUT of the droppable
+        out: function( event, ui ) {
 
             var respuesta_id = $(this).attr("id");
             store.remove(respuesta_id);
@@ -59,5 +58,5 @@ $( document ).ready(function() {
         },
 
     } );
-   
+
 });
